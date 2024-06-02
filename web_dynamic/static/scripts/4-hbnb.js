@@ -34,6 +34,7 @@ $('.filters button').click(function() {
             data: JSON.stringify({ amenities: List }),
             contentType: 'application/json; charset=utf-8',
             success: function (places) {
+		    $('.places').empty();
                 for (let i = 0; i < places.length; i++) {
                     $('.places').append(`<article>
                         <div class="title_box">
@@ -64,4 +65,3 @@ $('.filters button').click(function() {
             }
         });
     });
-});
